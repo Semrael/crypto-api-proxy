@@ -101,7 +101,8 @@ app.get('/prices', async (req, res) => {
       
       console.log('➡️ Kripto verileri çekiliyor...');
       const cryptoResponse = await axios.get(
-        `https://api.coingecko.com/api/v3/simple/price?ids=${coinList.join(',')}&vs_currencies=try`
+        'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,tether,solana,ripple,cardano,dogecoin,matic-network,litecoin,avalanche-2,tron&vs_currencies=try'
+
       );
       console.log('✅ Kripto verileri:', cryptoResponse.data);
       
